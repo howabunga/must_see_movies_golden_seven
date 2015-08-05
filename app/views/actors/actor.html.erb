@@ -1,0 +1,32 @@
+<h1>List of Actors</h1>
+
+<a href="/actors/new_form">Add a New Actor</a>
+
+<table>
+  <tr>
+    <th>Picture</th>
+    <th>Name</th>
+    <th>Date of Birth</th>
+    <th>Bio</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  <% @list_of_actors.each do |actor| %>
+  <tr>
+    <td><img src = "<%= actor.image_url%>"></td>
+    <td><%= actor.name %></td>
+    <td><%= actor.dob%></td>
+    <td><%= actor.bio%></td>
+    <td>
+      <a href="/actors/<%= actor.id %>">Show</a>
+    </td>
+    <td>
+      <a href="/actors/<%= actor.id %>/edit_form">Edit</a>
+    </td>
+    <td>
+      <a href="/delete_actors/<%= actor.id %>">Delete</a>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+

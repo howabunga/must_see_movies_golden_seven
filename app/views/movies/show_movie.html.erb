@@ -1,0 +1,11 @@
+<h1>Movie Details</h1>
+
+<p><img src="<%= @movie.image_url %>" width="300"></p>
+<p>Title: <%= @movie.title %></p>
+<p>Year: <%= @movie.year %></p>
+<p>Duration: <%= @movie.duration %></p>
+<p>Description: <%= @movie.description %></p>
+
+<td><a href="/movies">Back</a></td>
+<td><a href="/movies/<%= @movie.id %>/edit_form">Edit</a></td>
+<td><a href="/delete_movies/<%= @movie.id %>">Delete</a></td>
